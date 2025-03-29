@@ -1,0 +1,12 @@
+{
+  "rules": [
+    {
+      "pathPattern": "/api/blink",
+      "apiPath": "/api/blink"
+    },
+    {
+      "pathPattern": "/api/blink/:token",
+      "apiPath": "/api/blink/[token]"
+    }
+  ]
+} 
