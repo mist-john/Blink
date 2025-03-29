@@ -47,7 +47,16 @@ export function SiteHeader() {
             Funblinks
           </Link>
 
-          <div className="ml-auto flex h-full items-center">
+          <div className="flex items-center space-x-4">
+            <Link 
+              href="/create-token" 
+              className={cn(
+                buttonVariants({ variant: "ghost" }),
+                "hover:bg-primary/10"
+              )}
+            >
+              Create Token
+            </Link>
             <WalletButton />
           </div>
         </div>

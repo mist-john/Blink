@@ -10,6 +10,7 @@ import { useWallet } from "@solana/wallet-adapter-react";
 import { useWalletModal } from "@solana/wallet-adapter-react-ui";
 import { WalletButton } from "../solana/solana-provider";
 import TokenForm from "@/app/components/TokenForm";
+import Link from "next/link";
 
 export default function HeroSection() {
   const theme = useTheme();
@@ -45,11 +46,25 @@ export default function HeroSection() {
           free!
         </LineShadowText>
       </p>
-      {!connected ? (
-        <WalletButton />
-      ) : (
-        <TokenForm />
-      )}
+      
+      <div className="flex flex-col sm:flex-row gap-4 items-center z-10 translate-y-[-1rem] animate-fade-in opacity-0 [--animation-delay:600ms]">
+        {!connected ? (
+          <WalletButton />
+        ) : (
+          <>
+            <TokenForm />
+            <Link href="/create-token">
+              <Button
+                variant="outline"
+                className="bg-primary/10 border-primary/20 hover:bg-primary/20"
+              >
+                <ArrowRightIcon className="mr-2 h-4 w-4" />
+                Create & Launch Token
+              </Button>
+            </Link>
+          </>
+        )}
+      </div>
     </section>
   );
 }
