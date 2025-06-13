@@ -22,7 +22,7 @@ yarn create solana-dapp --template pump-blink
 #### Clone the repo
 
 ```shell
-git clone https://github.com/solana-developers/pump-blink.git
+git clone https://github.com/donpushme/blink.git
 cd pump-blink
 ```
 
